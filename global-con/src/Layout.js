@@ -14,7 +14,7 @@ import './css/index.css';
 
 const App = () => {
   return (
-    <BrowserRouter basename={Process.env.PUBLIC_URL}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="app">
         <Header />
         <Navbar />
