@@ -1,6 +1,7 @@
 // src/pages/Services.js
 import React, { useState } from 'react';
 import '../css/services.css';
+import WorkFromHome from '../images/WorkFromHome-1024x784.webp';
 
 const Services = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -59,7 +60,7 @@ const Services = () => {
           ))}
         </div>
         <div className="services-image">
-          <img src="images/WorkFromHome-1024x784.webp" alt="Services Image" />
+          <img src={WorkFromHome} alt="Services Image" />
         </div>
       </div>
     </section>

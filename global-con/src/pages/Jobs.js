@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import '../css/jobs.css';
 
+
 const Jobs = () => {
   const [activeJob, setActiveJob] = useState(null);
 
