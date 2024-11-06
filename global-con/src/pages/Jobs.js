@@ -1,97 +1,166 @@
 // src/pages/Jobs.js
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/jobs.css';
 
 const Jobs = () => {
+  const [activeJob, setActiveJob] = useState(null);
+
+  const toggleJobDetails = (jobId) => {
+    setActiveJob(activeJob === jobId ? null : jobId);
+  };
+
+  const jobs = [
+    {
+      id: 'network-engineer',
+      title: 'Network Engineer',
+      image: 'images/network-engineer.jpg',
+      description: 'Expertise in next-generation firewalls (Palo Alto, Zscaler), AWS, Azure. Strong communication in English required.',
+      salary: '$90,000 - $110,000',
+      experience: '5+ years',
+      location: 'Remote or On-site',
+      responsibilities: [
+        'Deploy and tune firewall policies using Algosec.',
+        'Perform root cause analysis for security incidents.',
+        'Maintain L2 network security in Cisco TAC operations.',
+        'Collaborate with cross-functional teams.'
+      ]
+    },
+    {
+      id: 'java-developer',
+      title: 'Java Full Stack Developer',
+      image: 'images/java-fullStack-dev.png',
+      description: 'Design microservices architecture and build scalable applications. Expertise in Java, Spring, cloud technologies.',
+      salary: '$85,000 - $105,000',
+      experience: '3+ years',
+      location: 'Hybrid',
+      responsibilities: [
+        'Analyze functional requirements and design solutions.',
+        'Write clean, maintainable code in Java and Spring.',
+        'Collaborate with front-end developers using React or Angular.',
+        'Optimize application components for maximum performance.'
+      ]
+    },
+    {
+      id: 'flutter-developer',
+      title: 'Flutter Developer',
+      image: 'images/flutter-dev.png',
+      description: 'Design and deploy applications using Flutter with a focus on payment integration. Experience with CI/CD processes.',
+      salary: '$75,000 - $95,000',
+      experience: '2+ years',
+      location: 'Remote',
+      responsibilities: [
+        'Develop cross-platform applications with Flutter.',
+        'Integrate payment systems into mobile applications.',
+        'Participate in code reviews and quality assurance.',
+        'Work with product leads to define user requirements.'
+      ]
+    },
+    {
+      id: 'data-analyst',
+      title: 'Data Analyst',
+      image: 'images/data-analyst.jpg',
+      description: 'Analyze data to drive business decisions. Proficiency in Python, SQL, and data visualization required.',
+      salary: '$70,000 - $90,000',
+      experience: '4+ years',
+      location: 'On-site',
+      responsibilities: [
+        'Perform data analysis and statistical modeling.',
+        'Create data visualizations to communicate findings.',
+        'Collaborate with cross-functional teams.',
+        'Mentor junior analysts on best practices.'
+      ]
+    },
+    {
+      id: 'full-stack',
+      title: 'Full Stack Developer',
+      image: 'images/full-stack-dev.jpg',
+      description: 'Develop scalable web applications. Knowledge of back-end languages and front-end technologies is required.',
+      salary: '$80,000 - $100,000',
+      experience: '3+ years',
+      location: 'Hybrid',
+      responsibilities: [
+        'Develop and maintain web applications.',
+        'Collaborate with front-end and back-end teams.',
+        'Optimize applications for maximum speed.',
+        'Troubleshoot, debug, and upgrade existing systems.'
+      ]
+    },
+    {
+      id: 'database-developer',
+      title: 'Database Developer',
+      image: 'images/database-dev.jpg',
+      description: 'Design and optimize database systems. Strong SQL skills and experience with RDBMS required.',
+      salary: '$75,000 - $95,000',
+      experience: '3+ years',
+      location: 'Remote',
+      responsibilities: [
+        'Design complex queries to optimize database performance.',
+        'Implement data models and maintain RDBMS.',
+        'Ensure data integrity and security.',
+        'Work with other departments to define data needs.'
+      ]
+    },
+    {
+      id: 'cyber-security',
+      title: 'Cyber Security',
+      image: 'images/cubersecurity.png',
+      description: 'Implement security standards and ensure data protection. Knowledge of IAM services and ISO 27001 is required.',
+      salary: '$85,000 - $110,000',
+      experience: '5+ years',
+      location: 'On-site',
+      responsibilities: [
+        'Identify potential security threats.',
+        'Implement IAM services and data protection protocols.',
+        'Conduct security audits and monitor network traffic.',
+        'Collaborate with IT teams to ensure compliance.'
+      ]
+    },
+    {
+      id: 'android-developer',
+      title: 'Android Developer',
+      image: 'images/android-dev.png',
+      description: 'Design and develop Android applications. Knowledge of payment integration, RDBMS, and third-party APIs is required.',
+      salary: '$70,000 - $90,000',
+      experience: '3+ years',
+      location: 'Remote',
+      responsibilities: [
+        'Develop and maintain Android applications.',
+        'Integrate third-party libraries and payment systems.',
+        'Collaborate with design and product teams.',
+        'Continuously improve application performance.'
+      ]
+    }
+  ];
+
   return (
     <section id="jobs">
-        <div class="jobs-banner">
-            <h2>Jobs</h2>
-        </div>
-        <div class="jobs-list">
-           
-            <div class="job" onclick="toggleJobDetails('network-engineer')">
-                <img src="images/network-engineer.jpg" alt="Network Engineer Image"/>
-                <h4>Network Engineer</h4>
-                <div id="network-engineer" class="job-details">
-                    <p>This role requires expertise in next-generation firewalls, particularly Palo Alto and Zscaler, along with a solid understanding of AWS and Azure environments. Candidates should have experience deploying security policies, tuning firewall policies with tools like Algosec, and addressing root cause analysis, while demonstrating strong communication skills in English. Experience with Cisco ISE, Aruba ClearPass, and L2 network security in Cisco TAC operations is also essential.</p>
-                    <button class="apply-btn" onclick="openApplyForm('Network Engineer')">Apply</button>
-                </div>
-            </div>
-
-          
-            <div class="job" onclick="toggleJobDetails('java-developer')">
-                <img src="images/java-fullStack-dev.png" alt="Java Full Stack Developer"/>
-                <h4>Java Full Stack Developer</h4>
-                <div id="java-developer" class="job-details">
-                    <p>The Java Full Stack Developer will analyze functional requirements, design microservices architecture, and code, test, and deploy application components, ensuring high-quality outputs that meet KPIs. The role requires strong knowledge of Java, Spring, and cloud technologies, along with experience in front-end frameworks like React or Angular. Proficiency in working under tight deadlines, version control systems, and familiarity with containerization technologies is essential.</p>
-                    <button class="apply-btn" onclick="openApplyForm('Java Full Stack Developer')">Apply</button>
-                </div>
-            </div>
-
-            
-            <div class="job" onclick="toggleJobDetails('flutter-developer')">
-                <img src="images/flutter-dev.png" alt="flutter-developer Image"/>
-                <h4>Flutter Developer </h4>
-                <div id="flutter-developer" class="job-details">
-                    <p>The Flutter Developer is responsible for designing, developing, and deploying applications using the Flutter framework and Dart language, with a strong focus on payment integration processes. Collaboration with product leads and code review as part of the CI/CD cycle are key aspects, along with experience in mobile app development for iOS and Android. Excellent communication skills and experience in a remote work environment are preferred.</p>
-                    <button class="apply-btn" onclick="openApplyForm('Flutter Developer')">Apply</button>
-                </div>
-            </div>
-
-            
-            <div class="job" onclick="toggleJobDetails('data-analyst')">
-                <img src="images/data-analyst.jpg" alt="Data Analyst Image"/>
-                <h4>Data Analyst </h4>
-                <div id="data-analyst" class="job-details">
-                    <p>The Data Analyst will analyze data using statistical techniques and visualization tools to derive insights that inform business decisions. Proficiency in Python, SQL, and data visualization libraries, along with experience in building machine learning models, is essential. Strong problem-solving skills and the ability to communicate complex findings are required, along with experience mentoring junior analysts.</p>
-                    <button class="apply-btn" onclick="openApplyForm('Data Analyst')">Apply</button>
-                </div>
-            </div>
-
-            
-            <div class="job" onclick="toggleJobDetails('full-stack')">
-                <img src="images/full-stack-dev.jpg" alt="Full Stack Developer Image"/>
-                <h4>Full Stack Developer</h4>
-                <div id="full-stack" class="job-details">
-                    <p>The Full Stack Developer must have proven experience in developing large-scale distributed web applications, with knowledge of multiple back-end languages and front-end technologies like React and Angular. Familiarity with database systems, caching technologies, and AWS is essential, along with strong problem-solving and communication skills. Experience using version control systems is also required.</p>
-                    <button class="apply-btn" onclick="openApplyForm('Full Stack Developer')">Apply</button>
-                </div>
-            </div>
-
-            
-            <div class="job" onclick="toggleJobDetails('database-developer')">
-                <img src="images/database-dev.jpg" alt="Database Developer Image"/>
-                <h4>Database Developer</h4>
-                <div id="database-developer" class="job-details">
-                    <p>The Database Developer will leverage strong SQL skills to write complex queries, design data models, and ensure optimal database performance. Experience with relational database management systems and performance tuning is essential, along with the ability to document data modeling requirements. Excellent communication skills are necessary for collaborating with stakeholders.</p>
-                    <button class="apply-btn" onclick="openApplyForm('Database Developer')">Apply</button>
-                </div>
-            </div>
-
-            
-            <div class="job" onclick="toggleJobDetails('cyber-security')">
-                <img src="images/cubersecurity.png" alt="Cyber Security Image"/>
-                <h4>Cyber Security </h4>
-                <div id="cyber-security" class="job-details">
-                    <p>The Cyber Security professional should have knowledge of standards such as ISO 27001 and experience with IAM services and identity federation protocols. Strong analytical and communication skills are essential, along with an understanding of information security and compliance concepts. Relevant certifications and experience with hybrid cloud architectures are preferred.</p>
-                    <button class="apply-btn" onclick="openApplyForm('Cyber Security')">Apply</button>
-                </div>
-            </div>
-
-            
-            <div class="job" onclick="toggleJobDetails('android-developer')">
-                <img src="images/android-dev.png" alt="Android Developer Image"/>
-                <h4>Android Developer </h4>
-                <div id="android-developer" class="job-details">
-                    <p>The Android Developer will design and build mobile applications while collaborating with cross-functional teams to implement features. Knowledge of payment integration, Android fundamentals, and RDBMS is required, along with experience in using third-party libraries and APIs. Strong problem-solving skills and familiarity with AI/ML development will be advantageous.</p>
-                    <button class="apply-btn" onclick="openApplyForm('Android Developer')">Apply</button>
-                </div>
-            </div>
-        </div>
+      <div className="jobs-banner">
+        <h2>Jobs</h2>
+      </div>
+      <div className="jobs-list">
+        {jobs.map((job) => (
+          <div key={job.id} className="job" onClick={() => toggleJobDetails(job.id)}>
+            <img src={job.image} alt={`${job.title} Image`} />
+            <h4>{job.title}</h4>
+            {activeJob === job.id && (
+              <div className="job-details">
+                <p>{job.description}</p>
+                <p><strong>Salary:</strong> {job.salary}</p>
+                <p><strong>Experience:</strong> {job.experience}</p>
+                <p><strong>Location:</strong> {job.location}</p>
+                <p><strong>Responsibilities:</strong></p>
+                <ul>
+                  {job.responsibilities.map((responsibility, index) => (
+                    <li key={index}>{responsibility}</li>
+                  ))}
+                </ul>
+                
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </section>
-
-    
   );
 };
 

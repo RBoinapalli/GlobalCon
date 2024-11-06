@@ -7,8 +7,8 @@ const Header = () => {
     <header>
       <div className="logo">
         <img src="/images/logo.png" alt="Logo" />
+        <h1>Global IT Consultants</h1>
       </div>
-      <h1>Global IT Consultants</h1>
     </header>
   );
 };

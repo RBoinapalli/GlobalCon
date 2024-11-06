@@ -58,8 +58,20 @@
     padding: 10px;
     display: none;
     margin-top: 10px;
+    border-top: 1px solid #ddd;
     border-radius: 10px;
 }
+
+/* Only show dropdown-content if active */
+.dropdown .dropdown-content {
+    display: block;
+  }
+  
+  
+  .dropdown-btn:focus {
+    outline: none;
+  }
+  
 
 .services-image {
     width: 35%;
