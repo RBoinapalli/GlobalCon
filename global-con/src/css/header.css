@@ -1,0 +1,25 @@
+header {
+    background-color: var(--global-header-bg);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex; /* Use flexbox to align image and text side by side */
+    align-items: center; /* Vertically center the content */
+}
+
+.logo img {
+    width: 15%;
+    height: 15%;
+    margin-right: 15px; /* Add space between the image and the text */
+}
+
+.logo h1 {
+    color: var(--global-white);
+    font-size: 3em;
+    margin-top: 50px; /* Remove default margin from h1 */
+}

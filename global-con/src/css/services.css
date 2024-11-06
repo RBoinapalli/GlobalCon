@@ -1,0 +1,72 @@
+/* src/css/services.css */
+.services {
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .services ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .services li {
+    margin-bottom: 10px;
+  }
+  
+/* Services Page */
+.services-banner {
+    background-color:  var(--global-nav-bg);
+    color: var(--global-white);
+    font-size: 150%;
+    text-align: center;
+    padding: 20px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.services-content {
+    width: 60%;
+}
+
+.dropdown {
+    margin-bottom: 20px;
+}
+
+.dropdown-btn {
+    background-color: var(--global-header-bg);
+    color: var(--global-modal-bg);
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background-color:  var(--global-banner-start);
+}
+
+.dropdown-content {
+    background-color:  var(--global-badge-bg);
+    padding: 10px;
+    display: none;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.services-image {
+    width: 35%;
+    text-align: center;
+}
+
+.services-image img {
+    width: 100%;
+    border-radius: 15px;
+}

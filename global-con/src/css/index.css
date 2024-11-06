@@ -1,0 +1,37 @@
+:root {
+    --global-white: white;
+    --global-bg: #f5f0ff;
+    --global-text: #4a004e;
+    --global-header-bg: #e599f7;
+    --global-nav-bg: #9d4edd;
+    --global-nav-hover: #ff85c0;
+    --global-banner-start: #ff87ab;
+    --global-badge-bg: #fbe5ff;
+    --global-badge-border: #e0aaff;
+    --global-modal-bg: #fff;
+    --global-button-bg: #c53da0;
+    --global-button-hover: #9b3487;
+}
+    
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color:#fff;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    
+}
+
+p {
+    font-size: 1.1rem;
+    color: var(--global-text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
