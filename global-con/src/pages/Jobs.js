@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import '../css/jobs.css';
 
 
+
 const Jobs = () => {
   const [activeJob, setActiveJob] = useState(null);
 
@@ -14,7 +15,7 @@ const Jobs = () => {
     {
       id: 'network-engineer',
       title: 'Network Engineer',
-      image: 'images/network-engineer.jpg',
+      image: 'network-engineer.jpg',
       description: 'Expertise in next-generation firewalls (Palo Alto, Zscaler), AWS, Azure. Strong communication in English required.',
       salary: '$90,000 - $110,000',
       experience: '5+ years',
