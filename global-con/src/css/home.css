@@ -1,0 +1,75 @@
+/* src/css/home.css */
+.home {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .home h2 {
+    color: #333;
+  }
+  
+  /* Banner Section */
+.banner {
+    background: linear-gradient(to bottom, var(--global-banner-start),  var(--global-nav-bg));
+    color:var(--global-modal-bg);
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+}
+
+/* Info Section (index.html) */
+.info {
+    text-align: center;
+    padding: 50px;
+}
+
+.info h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.emoji {
+    color: #e599f7;
+    font-size: 2rem; /* Adjust size as needed */
+}
+
+.badges {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.badge {
+    background-color: var(--global-badge-bg);
+    border: 2px solid var(--global-badge-border);
+    border-radius: 15px;
+    padding: 20px;
+    width: 20%;
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.badge:hover {
+    transform: scale(1.05);
+}
+
+.badge h1 {
+    font-size: 3rem;
+    color: #ff77e9;
+}
+
+.badge p {
+    font-size: 1.2rem;
+}
