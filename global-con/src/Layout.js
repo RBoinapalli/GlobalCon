@@ -10,6 +10,7 @@ import Admin from './pages/Admin';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Contact from './pages/Contact';
 import './css/index.css';
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/jobs" element={<Jobs />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
         <Footer />

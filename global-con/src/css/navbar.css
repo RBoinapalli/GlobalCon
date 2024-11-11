@@ -21,3 +21,29 @@ nav {
     text-decoration: none;
   }
   
+ /* src/css/navbar.css */
+.nav-links {
+  display: none;
+  list-style: none;
+}
+
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-toggle {
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: block; /* Show the toggle button by default */
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar-toggle {
+    display: none; /* Hide the toggle button on larger screens */
+  }
+}
