@@ -23,7 +23,7 @@ const Layout = () => {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/jobs" element={<Jobs />} />
-          <Rgitoute path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
         <Footer />
