@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import './css/index.css';
 
-const App = () => {
+const Layout = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="app">
@@ -33,4 +33,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Layout;
