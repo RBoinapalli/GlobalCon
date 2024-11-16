@@ -1,0 +1,26 @@
+header {
+    background-color: var(--global-header-bg);
+    padding: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center; /* Align logo and title vertically */
+  }
+  
+  .logo img {
+    width: 70px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 15px; /* Space between the logo and the title */
+  }
+  
+  .logo h1 {
+    color: var(--global-white);
+    font-size: 2.8em; /* Adjust font size as needed */
+    margin: 0; /* Remove any default margins */
+    white-space: nowrap; /* Prevent the title from wrapping onto multiple lines */
+  }
+  

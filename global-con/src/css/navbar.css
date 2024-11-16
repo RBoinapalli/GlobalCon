@@ -1,0 +1,52 @@
+nav {
+  background-color: #9d4edd;
+  color: #fff;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: none; /* Hidden by default */
+  list-style: none;
+}
+
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-toggle {
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: block; /* Show the toggle button by default */
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex !important; /* Always flex row on larger screens */
+    flex-direction: row; /* Enforce row layout */
+  }
+
+  .navbar-toggle {
+    display: none; /* Hide the toggle button on larger screens */
+  }
+
+  .nav-links.open {
+    flex-direction: row; /* Ensure it stays in row layout */
+  }
+}
