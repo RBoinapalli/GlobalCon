@@ -1,8 +1,7 @@
 /* src/css/footer.css */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+    background-color: var(global-header-bg);
+    padding: 5px;
     text-align: center;
     bottom: 0;
     width: 100%;
