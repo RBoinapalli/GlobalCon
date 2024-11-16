@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/GlobalCon/static/css/main.a7c5ad3c.css",
-    "main.js": "/GlobalCon/static/js/main.bf7857c2.js",
+    "main.css": "/GlobalCon/static/css/main.6639e516.css",
+    "main.js": "/GlobalCon/static/js/main.74e0b85d.js",
     "static/media/WorkFromHome-1024x784.webp": "/GlobalCon/static/media/WorkFromHome-1024x784.08bb348c0c02c1918426.webp",
     "static/media/ourgoals.png": "/GlobalCon/static/media/ourgoals.3c29c02c5f2e3a8899a2.png",
     "static/media/ourmission.png": "/GlobalCon/static/media/ourmission.f9d28929b17e3c130f6c.png",
     "static/media/logo.png": "/GlobalCon/static/media/logo.d8d374591b49271cc1f7.png",
     "static/media/ourvision.png": "/GlobalCon/static/media/ourvision.dfed01f25190f0ba0275.png",
     "index.html": "/GlobalCon/index.html",
-    "main.a7c5ad3c.css.map": "/GlobalCon/static/css/main.a7c5ad3c.css.map",
-    "main.bf7857c2.js.map": "/GlobalCon/static/js/main.bf7857c2.js.map"
+    "main.6639e516.css.map": "/GlobalCon/static/css/main.6639e516.css.map",
+    "main.74e0b85d.js.map": "/GlobalCon/static/js/main.74e0b85d.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7c5ad3c.css",
-    "static/js/main.bf7857c2.js"
+    "static/css/main.6639e516.css",
+    "static/js/main.74e0b85d.js"
   ]
 }
