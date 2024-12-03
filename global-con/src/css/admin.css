@@ -6,6 +6,7 @@
   
   .admin ul {
     list-style-type: none;
+    color: var(--global-badge-border);
     padding: 0;
   }
   
@@ -37,6 +38,8 @@
 
 /* Form styles */
 form {
+    padding-left: 5%;
+    padding-right: 5%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -81,4 +84,8 @@ form button:hover {
 /* Additional spacing */
 section {
     margin-bottom: 50px;
+}
+
+ul li {
+    color: var(--global-nav-bg);
 }
