@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/GlobalCon/static/css/main.6639e516.css",
+    "main.css": "/GlobalCon/static/css/main.6c277b38.css",
     "main.js": "/GlobalCon/static/js/main.53089a17.js",
     "static/media/WorkFromHome-1024x784.webp": "/GlobalCon/static/media/WorkFromHome-1024x784.08bb348c0c02c1918426.webp",
     "static/media/ourgoals.png": "/GlobalCon/static/media/ourgoals.3c29c02c5f2e3a8899a2.png",
@@ -8,11 +8,11 @@
     "static/media/logo.png": "/GlobalCon/static/media/logo.d8d374591b49271cc1f7.png",
     "static/media/ourvision.png": "/GlobalCon/static/media/ourvision.dfed01f25190f0ba0275.png",
     "index.html": "/GlobalCon/index.html",
-    "main.6639e516.css.map": "/GlobalCon/static/css/main.6639e516.css.map",
+    "main.6c277b38.css.map": "/GlobalCon/static/css/main.6c277b38.css.map",
     "main.53089a17.js.map": "/GlobalCon/static/js/main.53089a17.js.map"
   },
   "entrypoints": [
-    "static/css/main.6639e516.css",
+    "static/css/main.6c277b38.css",
     "static/js/main.53089a17.js"
   ]
 }
