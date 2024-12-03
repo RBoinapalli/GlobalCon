@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/admin.css';
 
 const Admin = () => {
@@ -20,6 +20,7 @@ const Admin = () => {
     try {
       const response = await fetch(API_URL);
       const data = await response.json();
+      console.log('Fetched jobs:', data); // Debugging
       setJobs(data);
     } catch (error) {
       console.error('Error fetching jobs:', error);
@@ -37,7 +38,6 @@ const Admin = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const method = editingJobId ? 'PUT' : 'POST';
       const url = editingJobId ? `${API_URL}/${editingJobId}` : API_URL;
@@ -49,7 +49,6 @@ const Admin = () => {
       });
 
       if (!response.ok) throw new Error('Failed to save job.');
-
       fetchJobs();
       setFormData({ title: '', description: '', skills: '', location: '', experience: '', salary: '' });
       setEditingJobId(null);
@@ -61,7 +60,8 @@ const Admin = () => {
   };
 
   const handleEdit = (job) => {
-    setEditingJobId(job.id);
+    console.log('Editing job:', job); // Debugging
+    setEditingJobId(job.id || job._id);
     setFormData(job);
   };
 
@@ -94,13 +94,17 @@ const Admin = () => {
       </form>
       {message && <p>{message}</p>}
       <ul>
-        {jobs.map((job) => (
-          <li key={job.id}>
-            <h3>{job.title}</h3>
-            <button onClick={() => handleEdit(job)}>Edit</button>
-            <button onClick={() => handleDelete(job.id)}>Delete</button>
-          </li>
-        ))}
+        {jobs.length > 0 ? (
+          jobs.map((job) => (
+            <li key={job.id || job._id}>
+              <h3>{job.title}</h3>
+              <button onClick={() => handleEdit(job)}>Edit</button>
+              <button onClick={() => handleDelete(job.id || job._id)}>Delete</button>
+            </li>
+          ))
+        ) : (
+          <p>No jobs available.</p>
+        )}
       </ul>
     </div>
   );
