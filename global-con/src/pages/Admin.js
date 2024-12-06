@@ -42,10 +42,19 @@ const Admin = () => {
       const method = editingJobId ? 'PUT' : 'POST';
       const url = editingJobId ? `${API_URL}/${editingJobId}` : API_URL;
 
+      // Log the form data being sent
+      console.log('Submitting job data:', {
+        ...formData,
+        skills: formData.skills.split(",").map(skill => skill.trim()), // Convert string to array
+      });
+
       const response = await fetch(url, {
         method,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          skills: formData.skills.split(",").map(skill => skill.trim()), // Convert string to array
+        }),
       });
 
       if (!response.ok) throw new Error('Failed to save job.');
@@ -61,8 +70,15 @@ const Admin = () => {
 
   const handleEdit = (job) => {
     console.log('Editing job:', job); // Debugging
-    setEditingJobId(job._id);
-    setFormData(job);
+    setEditingJobId(job._id); // Ensure this matches the server's job ID
+    setFormData({
+      title: job.title,
+      description: job.description,
+      skills: job.skills.join(", "), // Convert array to string
+      location: job.location,
+      experience: job.experience,
+      salary: job.salary,
+    });
   };
 
   const handleDelete = async (jobId) => {
@@ -85,7 +101,7 @@ const Admin = () => {
       <h1>Admin Dashboard</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" name="title" value={formData.title} onChange={handleInputChange} placeholder="Title" />
-        <input type="text" name="description" value={formData.description} onChange={handleInputChange} placeholder="Description" />
+        <input type="text" name="description" value={formData.description} onChange ={handleInputChange} placeholder="Description" />
         <input type="text" name="skills" value={formData.skills} onChange={handleInputChange} placeholder="Skills" />
         <input type="text" name="location" value={formData.location} onChange={handleInputChange} placeholder="Location" />
         <input type="text" name="experience" value={formData.experience} onChange={handleInputChange} placeholder="Experience" />
