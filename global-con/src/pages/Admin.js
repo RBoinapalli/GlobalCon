@@ -61,7 +61,7 @@ const Admin = () => {
 
   const handleEdit = (job) => {
     console.log('Editing job:', job); // Debugging
-    setEditingJobId(job.id || job._id);
+    setEditingJobId(job._id);
     setFormData(job);
   };
 
@@ -96,10 +96,10 @@ const Admin = () => {
       <ul>
         {jobs.length > 0 ? (
           jobs.map((job) => (
-            <li key={job.id || job._id}>
+            <li key={job._id}>
               <h3>{job.title}</h3>
               <button onClick={() => handleEdit(job)}>Edit</button>
-              <button onClick={() => handleDelete(job.id || job._id)}>Delete</button>
+              <button onClick={() => handleDelete(job._id)}>Delete</button>
             </li>
           ))
         ) : (
