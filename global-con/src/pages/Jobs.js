@@ -45,7 +45,7 @@ const Jobs = () => {
       <div className="jobs-list">
         {jobs.map((job) => (
           <div key={job._id} className="job" onClick={() => toggleJobDetails(job._id)}>
-            <img src={job.img} alt={`${job.title} Image`} />
+            <img src={`https://globalcon-server.onrender.com${job.img}`} alt={`${job.title} Image`} />
             <h4>{job.title}</h4>
             {activeJob === job._id && (
               <div className="job-details">
